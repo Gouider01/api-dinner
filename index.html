@@ -663,6 +663,239 @@ body.critic .rack,body.critic .shelf{opacity:0;transition:opacity .4s}
 .final small.bd em{font-style:normal;color:#C9D1DC;font-weight:700;text-align:right;font-family:var(--mono)}
 @media (max-width:1000px){.floor{grid-template-columns:1fr 1fr}.pass{grid-column:1/-1;order:-1}.ticket{width:88vw}.keys{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.queue,.spike{display:none}.final{flex-direction:column;align-items:center}}
 @media (prefers-reduced-motion:reduce){*,*::before{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ================= PHONE LAYOUT (body.mobile) ================= */
+button,.pot,[role=button]{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+body.mobile{overflow-x:hidden;overflow-y:auto}
+html:has(body.mobile){height:auto}
+body.mobile .scene{display:none}
+body.mobile::before{background:radial-gradient(ellipse 80% 40% at 50% 10%, rgba(233,180,76,.16), transparent 70%),radial-gradient(ellipse at 50% 50%, transparent 50%, rgba(5,9,20,.6) 100%)}
+
+/* --- overlay screens: start, round intros, end --- */
+body.mobile .screen{overflow-y:auto;place-items:start center;padding:22px 14px 30px}
+body.mobile .screen .card{width:100%}
+body.mobile .neonSign{padding:8px 10px 4px}
+body.mobile .neonSign .neon{font-size:68px}
+body.mobile .neonSign .open{right:-6px;top:-10px;font-size:14px}
+body.mobile .menu{width:100%;margin:16px 0 22px;padding:20px 16px 14px;transform:none}
+body.mobile .menu h2{font-size:32px}
+body.mobile .menu p.lead{font-size:14px}
+body.mobile .menu .item{font-size:16px;gap:6px}
+body.mobile .menu .item > span:first-child{max-width:68%}
+body.mobile .menu .item small{font-size:13px}
+body.mobile .menu .item .pr{font-size:13px;white-space:nowrap}
+body.mobile .credit{display:none}
+body.mobile .cta{font-size:19px;padding:15px 26px;width:100%;max-width:360px}
+body.mobile .chalk{width:100%;padding:24px 16px 22px;border-width:10px}
+body.mobile .chalk::after{display:none}
+body.mobile .chalk .doodle{width:52px;height:52px;right:12px;top:10px}
+body.mobile .chalk .n{font-size:22px!important}
+body.mobile .chalk .big{font-size:48px!important}
+body.mobile .chalk .sub{font-size:21px}
+body.mobile .chalk .ex{gap:8px}
+body.mobile .chalk .ex span{font-size:19px!important;padding:2px 10px!important}
+body.mobile .trail{flex-wrap:wrap;gap:6px;margin-top:18px}
+body.mobile .trail span{font-size:12px;padding:5px 10px}
+body.mobile .trail i{display:none}
+body.mobile .roundCard p[style]{margin-top:24px!important}
+body.mobile .endT{font-size:52px}
+body.mobile .final{flex-direction:column;align-items:center;gap:22px;margin:40px 0 90px}
+body.mobile .final > div{width:100%;max-width:330px;padding:20px 16px}
+body.mobile .final > div > b{font-size:80px}
+body.mobile .goldHat{width:86px;top:-60px}
+
+/* --- quiz --- */
+body.mobile .app{height:auto!important;min-height:100vh;padding:10px 12px 18px;grid-template-rows:auto auto auto;gap:10px}
+body.mobile .top{grid-template-columns:1fr auto;gap:8px}
+body.mobile .logo svg{width:30px;height:30px}
+body.mobile .logo .neon{font-size:30px}
+body.mobile .logo span:not(.neon){display:none}
+body.mobile .round{grid-column:1/-1;grid-row:2;justify-self:center;padding:5px 5px 5px 14px}
+body.mobile .round .t{font-size:16px}
+body.mobile .tools #fs{display:none}
+body.mobile .tool{padding:6px 8px;font-size:13px}
+body.mobile .floor{grid-template-columns:1fr 1fr;gap:12px 10px;align-items:start}
+body.mobile .pass{grid-column:1/-1;order:2;gap:14px}
+body.mobile .board{padding:14px 8px 12px;border-radius:16px}
+body.mobile .board .name{font-size:13px;padding:4px 8px!important}
+body.mobile .board .score{font-size:54px;margin:6px 0 2px}
+body.mobile .board .pts{font-size:12px}
+body.mobile .board .served,body.mobile .board .bell,body.mobile .board .rv{display:none}
+body.mobile .board .streak{font-size:11px;margin-top:2px;min-height:14px}
+body.mobile .board .turn{font-size:11px;padding:3px 10px;top:-11px}
+body.mobile .flames{top:-30px;height:38px}
+body.mobile .flames i{width:20px;height:34px}
+body.mobile .fireTag{font-size:11px;bottom:-11px}
+body.mobile .plus{top:-6px!important;font-size:30px;padding:4px 10px 6px}
+body.mobile .plus small{font-size:11px}
+body.mobile .railRow{height:auto;padding-top:6px}
+body.mobile .rail{height:12px}
+body.mobile .queue,body.mobile .spike,body.mobile .rat,body.mobile .ratTag,body.mobile .swat,body.mobile .plate{display:none!important}
+body.mobile .ticketWrap{position:relative;left:auto;top:-6px;transform:none;width:100%}
+body.mobile .ticketWrap.swing{animation:swingM .7s cubic-bezier(.3,1.5,.5,1)}
+body.mobile .ticketWrap.out{animation:outM .4s ease-in forwards}
+@keyframes swingM{0%{transform:translateY(-60px) rotate(-3deg);opacity:0}60%{transform:rotate(1.5deg);opacity:1}100%{transform:none}}
+@keyframes outM{to{transform:translateX(-120%) rotate(-10deg);opacity:0}}
+body.mobile .clip{width:64px;height:24px}
+body.mobile .ticket{width:100%;padding:28px 18px 84px}
+body.mobile .thead{font-size:12px}
+body.mobile .meta2{font-size:11px}
+body.mobile .order{font-size:23px;margin:14px 0 10px;min-height:0}
+body.mobile .ask{font-size:13px}
+body.mobile .bars,body.mobile .copy{display:none}
+body.mobile .clock{left:18px;bottom:18px;width:56px;height:56px}
+body.mobile .clock span{font-size:24px}
+body.mobile .stamp{font-size:26px;right:16px;bottom:24px;border-width:4px}
+body.mobile .burst{right:-14px;top:30px;width:120px;height:120px}
+body.mobile .keys{grid-template-columns:1fr 1fr!important;gap:10px}
+body.mobile .key{min-height:64px;padding:10px 12px;gap:10px;border-radius:14px}
+body.mobile .key .num{width:28px;height:28px;font-size:13px}
+body.mobile .key .lab{font-size:19px}
+body.mobile .key .lab small{font-size:12px}
+body.mobile .why{font-size:16px;min-height:0}
+body.mobile .why code{font-size:14px}
+body.mobile .bottom{grid-template-columns:1fr;gap:8px;position:sticky;bottom:8px;z-index:5}
+body.mobile .help{display:none}
+body.mobile .progress{text-align:center;font-size:12px}
+body.mobile .next{justify-self:stretch;width:100%;font-size:18px;padding:15px}
+body.mobile .next:not(.show){display:none}
+
+/* chefs smaller, out of the way */
+body.mobile .chef svg{width:120px!important;height:142px!important}
+body.mobile .chef .say{font-size:18px!important;max-width:220px!important;margin:0 0 -6px 20px!important;padding:10px 14px!important}
+body.mobile .happy{left:6px}
+body.mobile .happy svg{width:110px;height:130px}
+body.mobile .happy .say{font-size:20px;margin-bottom:90px;padding:8px 14px}
+body.mobile .flyPan{width:70px;height:70px}
+body.mobile .crash{font-size:40px}
+
+/* --- burger builder --- */
+body.mobile .bb{overflow-y:auto}
+body.mobile .bbTop{position:relative;left:auto;right:auto;top:auto;padding:14px 14px 0;grid-template-columns:1fr auto;gap:6px}
+body.mobile .bbTop > span:first-child{display:none}
+body.mobile .bbTop .rWho{text-align:left}
+body.mobile .bbTop .tape{font-size:15px;padding:4px 10px}
+body.mobile .bbTop .rWho small{font-size:12px}
+body.mobile .bbCount{font-size:11px}
+body.mobile .bbCount b{font-size:40px}
+body.mobile .bbGrid{position:relative;left:auto;right:auto;top:auto;bottom:auto;display:flex!important;flex-direction:column;gap:14px;padding:12px 14px 26px}
+body.mobile .bbTicket{order:1;transform:none;padding:16px 16px 26px}
+body.mobile .bbTicket .o{font-size:20px}
+body.mobile .bbTicket .built{display:none}
+body.mobile .bbStage{order:3;transform:none;zoom:.8;height:auto;min-height:150px;margin:40px auto 0}
+body.mobile .bbPanel{order:2;padding:16px 14px}
+body.mobile .bbPanel h3{font-size:26px!important}
+body.mobile .bbPanel .lbl2{font-size:13px}
+body.mobile .bbOpt{font-size:16px;padding:12px}
+body.mobile .bbRes .sc{font-size:56px}
+body.mobile .bbRes .why2{font-size:15px}
+body.mobile .bb .rHint{display:none}
+body.mobile .lyr.fixd::after,body.mobile .lyr.skip span{position:static}
+body.mobile .lyr.fixd::after{display:none}
+
+/* --- rush hour --- */
+body.mobile .rush{overflow-y:auto}
+body.mobile .rTop{left:14px;right:14px;top:12px;grid-template-columns:1fr auto;gap:4px 10px}
+body.mobile .rTop > span:first-child{display:none}
+body.mobile .rWho{text-align:left}
+body.mobile .rWho .tape{font-size:15px;padding:4px 10px}
+body.mobile .rWho small{font-size:12px}
+body.mobile .rStats{gap:10px}
+body.mobile .rScore b{font-size:40px}
+body.mobile .rScore small{font-size:11px}
+body.mobile .rClock{width:62px;height:62px}
+body.mobile .rClock span{font-size:24px}
+body.mobile .combo{position:absolute;right:0;top:70px}
+body.mobile .beltZone{top:120px}
+body.mobile .rItem{min-width:0;padding:10px 12px 16px;font-size:16px}
+body.mobile .inArrow{top:24px;right:10px;font-size:11px}
+body.mobile .legs{display:none}
+body.mobile .bin{top:290px;left:50%;margin-left:-30px;width:60px;height:68px}
+body.mobile .bin svg{width:60px;height:68px}
+body.mobile .bin b{top:26px;font-size:18px}
+body.mobile .bin small{top:70px}
+body.mobile .rFx{top:400px;width:90%}
+body.mobile .rFx b{font-size:44px}
+body.mobile .rFx small{font-size:14px}
+body.mobile .pot{bottom:auto;top:500px;width:46%}
+body.mobile .pot.l{left:2%} body.mobile .pot.r{right:2%}
+body.mobile .pot svg{width:100%;height:auto;max-width:200px}
+body.mobile .pot .lab{font-size:22px;padding:10px 18px}
+body.mobile .pot .lab kbd{display:none}
+body.mobile .pot .cnt{top:46px;font-size:28px}
+body.mobile .rush .rHint{display:none}
+body.mobile .rush::after{content:"";display:block;position:absolute;left:0;top:700px;height:1px;width:1px}
+body.mobile .rCount b{font-size:120px}
+body.mobile .rSum .card{padding:24px 18px}
+body.mobile .rSum .big2{font-size:70px}
+
+/* --- critic's table --- */
+body.mobile .cr.on{display:grid;grid-template-columns:1fr 1fr;gap:12px 10px;align-content:start;padding:12px 12px 26px;overflow-y:auto}
+body.mobile .cr > *{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:auto!important;margin:0!important}
+body.mobile .cr .candle,body.mobile .cr .table,body.mobile .cr .setting,body.mobile .cr .crHint{display:none}
+body.mobile .crTop{grid-column:1/-1;order:1;display:flex!important;justify-content:space-between;align-items:center}
+body.mobile .crTop .neon{font-size:30px}
+body.mobile .crTop .tools2{display:none}
+body.mobile .crRound{font-size:12px}
+body.mobile .critic2{grid-column:1/-1;order:2;display:flex;gap:8px}
+body.mobile .critic2 svg{width:76px;height:90px}
+body.mobile .critic2 .bub{margin-top:4px;padding:12px 14px}
+body.mobile .critic2 .bub::before{top:26px}
+body.mobile .critic2 .bub p{font-size:18px}
+body.mobile .stars{grid-column:1/-1;order:3;justify-content:center;height:0;overflow:visible;z-index:6}
+body.mobile .stars.show{animation:starsM 1.8s ease forwards}
+@keyframes starsM{0%{opacity:0}15%{opacity:1}85%{opacity:1}100%{opacity:0}}
+body.mobile .crMenu{grid-column:1/-1;order:4}
+body.mobile .crOpt{font-size:15px!important;min-height:54px!important;padding:8px 10px;gap:10px}
+body.mobile .crOpt .L{width:30px;height:30px;font-size:15px}
+body.mobile .crOpt .who i{font-size:9px}
+body.mobile .crWhy{grid-column:1/-1;order:5;font-size:15px;color:#D5DCE8}
+body.mobile .cr:not(.revealed) .crWhy{display:none}
+body.mobile .seat{order:6;padding:12px 6px 12px;border-radius:16px}
+body.mobile .seat .tape{font-size:13px;padding:4px 8px}
+body.mobile .seat .bank{font-size:40px;margin:6px 0 0}
+body.mobile .seat .bank small{font-size:11px}
+body.mobile .seat h4{font-size:12px;margin:10px 0 6px}
+body.mobile .chips{gap:5px}
+body.mobile .chip{width:48px;height:48px;font-size:13px}
+body.mobile .chip::before{inset:3px;border-width:3px}
+body.mobile .chip small,body.mobile .pick2 small{display:none}
+body.mobile .picks{gap:6px;margin-top:6px!important}
+body.mobile .pick2{width:44px;height:44px;font-size:20px;border-radius:12px}
+body.mobile .seat h4[style]{margin-top:12px!important}
+body.mobile .locked{margin-top:10px;font-size:12px;min-height:16px}
+body.mobile .seat .result{position:static;font-size:30px;min-height:0;margin-top:4px;text-shadow:none}
+body.mobile .seal{inset:48px 8px 8px}
+body.mobile .seal .wax{width:44px;height:44px;font-size:18px;margin-top:16px}
+body.mobile .seal b{font-size:16px}
+body.mobile .seal small{font-size:11px;text-align:center;padding:0 4px}
+body.mobile .crBtn{grid-column:1/-1;order:7;min-width:0;width:100%!important;position:sticky!important;bottom:8px!important}
+
+body.mobile .screen.on{display:block}
+body.mobile .screen .card{margin:0 auto;max-width:520px}
+body.mobile .bbStage{zoom:.72;width:100%;align-self:center;align-items:center}
+body.mobile .bbPlate{width:420px;max-width:100%}
+
+body.mobile .ticket{overflow:hidden}
+body.mobile .app,body.mobile .bb,body.mobile .rush,body.mobile .cr{overflow-x:clip}
+html:has(body.mobile){overflow-x:clip}
+
+/* sideways phone */
+body.mobile.land .beltZone{top:58px}
+body.mobile.land .rTop{top:8px}
+body.mobile.land .rWho small{display:none}
+body.mobile.land .inArrow{display:none}
+body.mobile.land .bin{display:none}
+body.mobile.land .rFx{top:210px}
+body.mobile.land .rFx b{font-size:34px}
+body.mobile.land .pot{top:200px;width:28%}
+body.mobile.land .pot.l{left:4%} body.mobile.land .pot.r{right:4%}
+body.mobile.land .pot svg{max-width:150px}
+body.mobile.land .pot .lab{font-size:18px;padding:6px 14px;margin-top:0}
+body.mobile.land .pot .cnt{top:34px;font-size:22px}
+body.mobile.land .rush::after{top:380px}
+body.mobile.land .crBtn{position:relative!important}
+body.mobile.land .ticket{padding-bottom:70px}
 </style>
 </head>
 <body>
@@ -1626,7 +1859,11 @@ document.addEventListener("keydown", e => {
 });
 document.querySelectorAll(".board .name").forEach(n => n.addEventListener("input", () => { if (st) $("#oTeam").textContent = names()[st.turn]; }));
 // scale everything up on big screens (projectors), designed for 1366x768
-function fit(){ const z = Math.max(1, Math.min(innerWidth/1366, innerHeight/768)); document.documentElement.style.zoom = z.toFixed(3); document.documentElement.style.setProperty('--z', z.toFixed(3)); window.Z = z; }
+function fit(){
+  const mob = innerWidth <= 760 || innerHeight <= 520;
+  document.body.classList.toggle("mobile", mob); document.body.classList.toggle("land", mob && innerWidth > innerHeight);
+  const z = mob ? 1 : Math.max(.6, Math.min(innerWidth/1366, innerHeight/768));
+  document.documentElement.style.zoom = z.toFixed(3); document.documentElement.style.setProperty('--z', z.toFixed(3)); window.Z = z; }
 addEventListener("resize", fit); fit();
 reset();
 </script>
