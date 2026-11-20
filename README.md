@@ -4,7 +4,6 @@ An interactive team game about web services, set in a diner kitchen. Built for a
 
 The client is the customer, the API is the waiter, and the server is the kitchen. Two teams compete to serve orders correctly and win the night.
 
-**Play it:** `https://YOUR-USERNAME.github.io/api-diner/`
 
 ## What it covers
 
